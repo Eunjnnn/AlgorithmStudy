@@ -1,10 +1,11 @@
-t = int(input())
+test = int(input())
 
-for i in range(t):
-    h, w, n = map(int, input().split())
-    num = n//h + 1
-    floor = n % h
+for i in range(test):
+    h, w, n = map(int, input().split() )
+
+    units = n // h + 1
+    hund = n % h
     if n % h == 0:
-        num = n//h
-        floor = h
-    print(f'{floor*100+num}')
+        units = n//h
+        hund = h
+    print(f'{hund * 100 + units}')

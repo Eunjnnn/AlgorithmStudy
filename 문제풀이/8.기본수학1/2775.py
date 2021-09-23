@@ -1,0 +1,11 @@
+t = int(input())
+
+for _ in range(t):
+    k = int(input())
+    n = int(input())
+
+    nums = [i for i in range(1, n+1)]
+    for _ in range(k):
+        for j in range(1, n):
+            nums[j] += nums[j-1]
+    print(nums[-1])
