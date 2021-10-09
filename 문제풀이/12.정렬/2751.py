@@ -1,3 +1,5 @@
+import sys
+
 N = int(input())
 l = []
 
