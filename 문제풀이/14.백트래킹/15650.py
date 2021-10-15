@@ -2,19 +2,19 @@ N , M = map(int, input().split())
 
 s = []
 
-def dfs():
+def dfs(first):
     if len(s) == M:
         # print('final: ', s)
         print(' '.join(map(str, s)))
         return
 
-    for i in range(1, N+1):
+    for i in range(first, N+1):
         if i not in s:
             # print('original: ', s)
             s.append(i)
             # print('s.append(i): ', s)
-            dfs()
+            dfs(i+1)
             s.pop()
             # print('s.pop(i): ', s)
 
-dfs()
+dfs(1)
