@@ -28,15 +28,16 @@ col = [0] * N
 # 2. 퀸의 위치가 올바른지 확인할 함수를 생성한다.
 def isCorrect(i):
     for x in range(i):
-        if col[i] == col[x] or abs(col[i] - col[x] ) == i-x:
+        if col[i] == col[x] or abs(col[i] - col[x]) == i-x:
         # 만약 같은 열에 위치하거나 대각선에 위치한다면
             return False
             #올바른 위치가 아니다.
     return True
 
+
 # 3. i는 0부터 시작해 n이 되면 경우의 수 + 1을 해준다
 def nQueens(i):
-    global  count
+    global count
     if i == N:      # 만약 퀸의 개수가 n개라면 탈출하면서 경우의 수를 반환
         count += 1
     else:
