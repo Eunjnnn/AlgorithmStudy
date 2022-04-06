@@ -1,0 +1,6 @@
+-- 코드를 입력하세요
+SELECT DATETIME FROM ANIMAL_INS WHERE DATETIME = (SELECT MAX(DATETIME) FROM ANIMAL_INS);
+
+"""
+Max(칼럼) : 가장 늦은 날짜 구할 수 있다.
+"""
